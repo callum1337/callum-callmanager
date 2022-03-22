@@ -1,7 +1,7 @@
 
 # Callum Callmanager
 
-## information
+## Information
 This callmanager must be using the latest vRP version as it has important rageui features that are involved in this resource
 
 ## Installation
