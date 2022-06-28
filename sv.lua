@@ -133,8 +133,8 @@ RegisterNetEvent('callmanager:admin:takeTicket', function(ticketInfo)
     local target_id = ticketInfo.id
     local target_source = getSource(target_id)
 
-    local admin_ped = PlayerPedId(source)
-    local target_ped = PlayerPedId(target_source)
+    local admin_ped = GetPlayerPed(source)
+    local target_ped = GetPlayerPed(target_source)
     
     local admin_coords = GetEntityCoords(admin_ped)
     local target_coords = GetEntityCoords(target_ped)
@@ -166,8 +166,8 @@ RegisterNetEvent('callmanager:police:takeTicket', function(info)
     local user_id = usertable[source]
     local target_id = info.id
     local target_source = getSource(target_id)
-    local admin_ped = PlayerPedId(source)
-    local target_ped = PlayerPedId(target_source)
+    local admin_ped = GetPlayerPed(source)
+    local target_ped = GetPlayerPed(target_source)
     local admin_coords = GetEntityCoords(admin_ped)
     local target_coords = GetEntityCoords(target_ped)
     if user_id ~= nil and target_id ~= nil then
@@ -183,7 +183,7 @@ RegisterNetEvent('callmanager:nhs:takeTicket', function(info)
     local user_id = usertable[source]
     local target_id = info.id
     local target_source = getSource(target_id)
-    local target_ped = PlayerPedId(target_source)
+    local target_ped = GetPlayerPed(target_source)
     local target_coords = GetEntityCoords(target_ped)
     if user_id ~= nil and target_id ~= nil then
         if hasNHS(source) then
